@@ -15,11 +15,12 @@
     "users": "Benutzer",
     "search": "Suchen",
     "users_table_header_name": "Name",
-    "users_table_header_username": "Nutzername",
+    "users_table_header_username": "Benutzername",
     "users_table_header_email": "Email",
     "heading_performance": "Leistung",
     "comparisons_between_sales_and_profit": "Vergleich zwischen Umsatz und Gewinn",
     "axis_label_month": "Monat",
     "m_value_sales": "Verkäufe",
-    "value_profit": "Profitieren"
+    "value_profit": "Profitieren",
+    "search_by_name": "Mit Namen suchen..."
 }

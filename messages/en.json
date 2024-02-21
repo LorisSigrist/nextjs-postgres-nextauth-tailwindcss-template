@@ -21,5 +21,6 @@
     "comparisons_between_sales_and_profit": "Comparison between Sales and Profit",
     "axis_label_month": "Month",
     "m_value_sales": "Sales",
-    "value_profit": "Profit"
+    "value_profit": "Profit",
+    "search_by_name": "Search by name..."
 }
