@@ -1,7 +1,11 @@
 import Navbar from './navbar';
-import { auth } from './auth';
 
 export default async function Nav() {
-  const session = await auth();
-  return <Navbar user={session?.user} />;
+  await sleep(300);
+  return <Navbar />;
+}
+
+
+async function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

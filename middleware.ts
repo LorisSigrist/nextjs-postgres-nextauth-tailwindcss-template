@@ -1,0 +1,1 @@
+export { middleware } from "@inlang/paraglide-js-adapter-next"

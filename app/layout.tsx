@@ -1,15 +1,17 @@
 import './globals.css';
-
-import { Analytics } from '@vercel/analytics/react';
+import { LanguageProvider } from '@inlang/paraglide-js-adapter-next';
+import { languageTag } from '@/paraglide/runtime.js';
+import * as m from '@/paraglide/messages.js';
 import Nav from './nav';
-import Toast from './toast';
 import { Suspense } from 'react';
 
-export const metadata = {
-  title: 'Next.js App Router + NextAuth + Tailwind CSS',
-  description:
-    'A user admin dashboard configured with Next.js, Postgres, NextAuth, Tailwind CSS, TypeScript, ESLint, and Prettier.'
-};
+export async function generateMetadata() {
+  return {
+    title: m.home_metadata_title(),
+    description:
+      m.home_metadata_description()
+  };  
+}
 
 export default function RootLayout({
   children
@@ -17,15 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full bg-gray-50">
-      <body className="h-full">
-        <Suspense>
-          <Nav />
-        </Suspense>
-        {children}
-        <Analytics />
-        <Toast />
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang={languageTag()} className="h-full bg-gray-50">
+        <body className="h-full">
+          <Suspense>
+            <Nav />
+          </Suspense>
+          {children}
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

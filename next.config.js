@@ -1,5 +1,12 @@
+const { paraglide } = require('@inlang/paraglide-js-adapter-next/plugin');
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = paraglide({
+  paraglide: {
+		project: "./project.inlang",
+		outdir: "./paraglide",
+	},
+
   images: {
     remotePatterns: [
       {
@@ -12,6 +19,6 @@ const nextConfig = {
       }
     ]
   }
-};
+});
 
 module.exports = nextConfig;

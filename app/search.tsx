@@ -1,8 +1,9 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '@inlang/paraglide-js-adapter-next';
 import { useTransition } from 'react';
+import * as m from '@/paraglide/messages';
 
 export default function Search({ disabled }: { disabled?: boolean }) {
   const { replace } = useRouter();
@@ -25,7 +26,7 @@ export default function Search({ disabled }: { disabled?: boolean }) {
   return (
     <div className="relative mt-5 max-w-md">
       <label htmlFor="search" className="sr-only">
-        Search
+        {m.search()}
       </label>
       <div className="rounded-md shadow-sm">
         <div

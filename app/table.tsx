@@ -7,6 +7,7 @@ import {
   TableCell,
   Text
 } from '@tremor/react';
+import * as m from '@/paraglide/messages';
 
 interface User {
   id: number;
@@ -20,9 +21,9 @@ export default function UsersTable({ users }: { users: User[] }) {
     <Table>
       <TableHead>
         <TableRow>
-          <TableHeaderCell>Name</TableHeaderCell>
-          <TableHeaderCell>Username</TableHeaderCell>
-          <TableHeaderCell>Email</TableHeaderCell>
+          <TableHeaderCell>{m.users_table_header_name()}</TableHeaderCell>
+          <TableHeaderCell>{m.users_table_header_username()}</TableHeaderCell>
+          <TableHeaderCell>{m.users_table_header_email()}</TableHeaderCell>
         </TableRow>
       </TableHead>
       <TableBody>

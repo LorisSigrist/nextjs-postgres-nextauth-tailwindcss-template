@@ -2,12 +2,15 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm run paraglide && next dev",
+    "build": "pnpm run paraglide && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./paraglide",
+    "paraglide:watch": "paraglide-js compile --project ./project.inlang --outdir ./paraglide --watch"
   },
   "dependencies": {
+    "@inlang/paraglide-js-adapter-next": "*",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@tremor/react": "^3.10.0",
@@ -37,5 +40,8 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "none"
+  },
+  "devDependencies": {
+    "@inlang/paraglide-js": "1.2.5"
   }
 }
